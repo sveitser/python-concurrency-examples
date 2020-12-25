@@ -43,6 +43,4 @@ writer_thread.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
     futures = [executor.submit(producer, url) for url in range(5)]
 
-concurrent.futures.wait(futures)
-
 write(sentinel)
