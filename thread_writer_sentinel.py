@@ -34,10 +34,6 @@ def producer(url):
     write(item)
 
 
-def stop(sentinel):
-    write(sentinel)
-
-
 sentinel = object()
 
 writer_thread = threading.Thread(target=writer, args=(sentinel,))
