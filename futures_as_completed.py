@@ -7,7 +7,7 @@ shelf = shelve.open("my.shelf")
 
 
 def producer(url):
-    time.sleep(random.random())
+    time.sleep(0.1 * random.random())
     item = (url, f"Dummy data for url {url}")
     return item
 
